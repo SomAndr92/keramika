@@ -21,7 +21,7 @@ if ($_POST['auth']) {
                 $_SESSION['auth'] = true;
                 $_SESSION['login'] = $login;
                 $_SESSION['role'] = $row['role'];
-                header('Location: /tovar.php');
+                header('Location: /main.php');
             } else{
                 echo 'неверные данные';
             }
