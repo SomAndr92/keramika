@@ -23,17 +23,44 @@ if ($_POST['exit']) {
 
 </head>
 <body>
-<nav class="navbar bg-body-tertiary">
+<nav class="navbar bg-dark" data-bs-theme="dark" >
   <div class="container">
-    <a class="navbar-brand">ЛОГО</a>
+    <a class="navbar-brand">КЕРАМИКА</a>
    <? if(!empty($_SESSION['login'])){?>
-   
-    <form method="post" class="d-flex" >
+    <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
+          <span class="navbar-toggler-icon"></span>
+        </button> 
+      
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav ">
+            <a class="nav-link text-light me-4" href="#">О нас</a>
+            <li class="nav-item  dropdown text-light me-4">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Услуги
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Бесконтактаная мойка</a></li>
+                <li><a class="dropdown-item" href="#">Пылесос салона</a></li>
+                <li><a class="dropdown-item" href="#">Очистка дисков от нагара</a></li>
+              </ul>
+            </li>
+            <a class="nav-link text-light me-4" href="#">Клубная карта</a>
+            <a class="nav-link text-light me-4" href="#">Отзывы</a>
+            <a class="nav-link text-light me-4" href="#">Контакты</a>
+          </div>
+        </div>    
+   -->
+    <form method="post" class="d-flex align-items-center" >
     
-      <div class="me-2">
-      <i class="fa-solid fa-user fa-lg" style="color: #404a40;"></i>
+      <div class="me-2 text-light">
+      <i class="fa-solid fa-user fa-lg" style="color: green;"></i>
+      
         <?  echo $_SESSION['login'];
-      ?></div>
+        
+      ?>
+      
+    </div>
       
       <input class="btn btn-outline-warning" type="submit" name="exit" value="Выход">
     </form><?
