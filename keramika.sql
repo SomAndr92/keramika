@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 27 2024 г., 18:54
+-- Время создания: Янв 28 2024 г., 19:39
 -- Версия сервера: 10.4.26-MariaDB
 -- Версия PHP: 7.2.34
 
@@ -40,7 +40,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `login`, `pass`, `role`, `email`) VALUES
-(1, 'admin', 'admin', 'admin', '');
+(3, 'test', '098f6bcd4621d373cade4e832627b4f6', NULL, 'test@q'),
+(5, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', 'admin@mail'),
+(6, '123', '202cb962ac59075b964b07152d234b70', NULL, '123@q');
 
 --
 -- Индексы сохранённых таблиц
@@ -61,7 +63,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
