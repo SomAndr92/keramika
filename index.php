@@ -14,7 +14,7 @@ if ($_POST['auth']) {
 
     if (!empty($login) and !empty($pass)) {
         $db = dbconn();
-            //$pass=md5($pass);
+            $pass=md5($pass);
             $query = $db->query("SELECT * FROM `users` WHERE `login` = '$login' AND `pass` = '$pass' ");
             if($query->num_rows > 0){
                 $row = $query->fetch_assoc();

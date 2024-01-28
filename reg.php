@@ -6,13 +6,12 @@ if ($_POST['auth']) {
     $new_login = $_POST['n_login'];
     $new_pass = $_POST['n_pass'];
     $new_email = $_POST['n_email'];
-    $new_name = $_POST['n_name'];
 
-    if (!empty($new_login) and !empty($new_pass) and !empty($new_email) and !empty($new_name)) {
+    if (!empty($new_login) and !empty($new_pass) and !empty($new_email) ) {
         $db = dbconn();
             $new_pass=md5($new_pass);
-            $query = $db->query("INSERT INTO `users`(`login`, `pass`, `email`, `name`) 
-            VALUES ('$new_login', '$new_pass', '$new_email', '$new_name')");  
+            $query = $db->query("INSERT INTO `users`(`login`, `pass`, `email`) 
+            VALUES ('$new_login', '$new_pass', '$new_email')");  
             //проверка на не совпадение логинов
             if($query) 
             {
@@ -66,13 +65,12 @@ if ($_POST['exit']) {
     
 
     <?if($_SESSION['auth'] != true){?>
-    <form method="post" class="row justify-content-md-center gy-1">
+    <form method="post" class="row justify-content-center gy-1">
 
         <input type="text" class="form-control" name="n_login" placeholder='логин' required >
         <input type="password" class="form-control" name="n_pass" placeholder='пароль' required>
         <input type="email" class="form-control" name="n_email" placeholder='email' required >
-        <input type="name" class="form-control" name="n_name" placeholder='имя' required >
-        <input type="submit" class="btn btn-primary col-md-auto" value="Зарегистрироваться" name="auth">
+        <input type="submit" class="btn btn-primary col-auto" value="Зарегистрироваться" name="auth">
     </form>
     <?}?>
     </div>
