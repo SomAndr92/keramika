@@ -48,6 +48,25 @@ if ($_POST['exit']) {
             <a class="nav-link text-light me-4" href="#">Клубная карта</a>
             <a class="nav-link text-light me-4" href="#">Отзывы</a>
             <a class="nav-link text-light me-4" href="#">Контакты</a>
+
+            <li class="nav-item  dropdown text-light me-4">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-user fa-lg" style="color: green;"></i>
+              </a>
+              <ul class="dropdown-menu">
+              <a class="nav-link text-light me-4" href="#"> <form method="post" class="d-flex flex-column align-items-center" >
+    
+                    <div class="me-2 text-light">
+
+                      <?  echo $_SESSION['login'];
+                    ?>
+                  </div>
+
+                    <input class="btn btn-outline-warning" type="submit" name="exit" value="Выход">
+                  </form></a>
+              </ul>
+            </li>
+<!--
             <a class="nav-link text-light me-4" href="#"> <form method="post" class="d-flex align-items-center" >
     
     <div class="me-2 text-light">
@@ -61,6 +80,7 @@ if ($_POST['exit']) {
     
     <input class="btn btn-outline-warning" type="submit" name="exit" value="Выход">
   </form></a>
+   -->
           </div>
         </div>    
    
@@ -68,14 +88,21 @@ if ($_POST['exit']) {
 }?>
   </div>
 </nav>  
-<div class="container"> 
-<div class="row">
 
 
-Главная страница
-
-</div>
-</div>
+<div class="p-5 text-start bg-image d-flex align-items-center fon1">
+    <div class="mask m-auto w-75 p-3 ">
+      <div class="d-flex  h-100">
+        <div class="text-white">
+          <h1 class="mb-3 fw-bold">Керамическая плитка высокого качества</h1>
+          <h3 class="mb-3 ">от ведущих производителей</h3>
+          <h6 class="mb-3 ">Скидка на керамическую плитку для кухни - 50% до конца апреля - 
+            успейте заказать выгодно!</h6>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
