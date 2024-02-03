@@ -1,6 +1,10 @@
 <?
 session_start();
 include 'dbconnect.php';
+
+if ($_POST['cancel']) {
+    header('Location: /index.php');
+}
 if ($_POST['auth']) {
 
     $new_login = $_POST['n_login'];
@@ -65,12 +69,13 @@ if ($_POST['exit']) {
     
 
     <?if($_SESSION['auth'] != true){?>
-    <form method="post" class="row justify-content-center gy-1">
+    <form method="post" class="d-flex flex-column align-items-center col-auto">
 
         <input type="text" class="form-control" name="n_login" placeholder='логин' required >
         <input type="password" class="form-control" name="n_pass" placeholder='пароль' required>
         <input type="email" class="form-control" name="n_email" placeholder='email' required >
-        <input type="submit" class="btn btn-primary col-auto" value="Зарегистрироваться" name="auth">
+        <input type="submit" class="btn btn-primary col-auto mt-2" value="Зарегистрироваться" name="auth">
+        <input type="submit" class="btn btn-warning col-auto mt-2" value="Отмена" name="cancel">
     </form>
     <?}?>
     </div>
