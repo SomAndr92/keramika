@@ -104,6 +104,32 @@ if ($_POST['exit']) {
     </div>
   </div>
 
+  <div class="container  mt-5">
+    <div class=" d-flex flex-row mb-3 justify-content-between item_text">
+
+      <div class="item mt-3">
+        <div> <i class="fa-regular fa-clock fa-2xl" style="color:#0d6efd ;"></i></div>
+        <div class="fw-bold fs-3 mt-2">Быстро</div>
+        <div class="text-secondary mt-2">Мы ценим время наших клиентов, имеем большой опыт работы с автомобилями
+          различных марок и моделей</div>
+      </div>
+      <div class="item mt-3">
+        <div> <i class="fa-solid fa-check fa-2xl" style="color: #0d6efd ;"></i></div>
+        <div class="fw-bold fs-3 mt-2">Качественно</div>
+        <div class="text-secondary mt-2">Мы не экономим на автохимии, расходниках и оборудовании, вы не увидите следы
+          коррозии на хромированных деталях кузова, разводы и оставшуюся грязь</div>
+      </div>
+      <div class="item mt-3">
+        <div> <i class="fa-solid fa-ruble-sign fa-2xl" style="color: #0d6efd ;"></i></div>
+        <div class="fw-bold fs-3 mt-2">Доступно</div>
+        <div class="text-secondary mt-2">Мы стремимся сделать наши услуги максимально доступными и предлагаем золотую
+          середину между качеством и ценой</div>
+      </div>
+
+
+
+    </div>
+  </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

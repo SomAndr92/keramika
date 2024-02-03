@@ -1,5 +1,5 @@
 body{
-    background: url('/фото/фон1.jpg') no-repeat;
+    background: url('/фото/фон2.jpg') ;
     
     
     
@@ -19,6 +19,10 @@ body{
     background-size: cover;
     height: 450px;
     
+}
+
+.item{
+    width: 30%;  
 }
 
 
