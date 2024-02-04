@@ -63,20 +63,20 @@ if ($_POST['exit']) {
   </div>
 </nav>
     <div class="container">
-    <div class="col-md-4 mx-auto">
-        <div  class="row justify-content-md-center fs-2"> Регистрация</div>
+    <div class="mx-auto d-flex flex-column align-items-center">
+        <div  class=" row justify-content-md-center fs-2"> Регистрация</div>
         
     
 
     <?if($_SESSION['auth'] != true){?>
-    <form method="post" class="d-flex flex-column align-items-center col-auto">
+    <form method="post" class="d-flex flex-column align-items-center col-5">
 
         <input type="text" class="form-control" name="n_login" placeholder='логин' required >
         <input type="password" class="form-control" name="n_pass" placeholder='пароль' required>
         <input type="email" class="form-control" name="n_email" placeholder='email' required >
         <input type="submit" class="btn btn-primary col-auto mt-2" value="Зарегистрироваться" name="auth">
-        <input type="submit" class="btn btn-warning col-auto mt-2" value="Отмена" name="cancel">
     </form>
+    <a href="index.php" > <button class="col-auto btn btn-warning mt-2"> Отмена</button></a>
     <?}?>
     </div>
     </div>

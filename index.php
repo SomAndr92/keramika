@@ -3,10 +3,6 @@ session_start();
 
 include 'dbconnect.php';
 
-if ($_POST['reg']) {
-    header('Location: /reg.php');
-}
-
 if ($_POST['auth']) {
 
     $login = $_POST['login'];
@@ -71,15 +67,15 @@ if ($_POST['exit']) {
 
 <div class="container">
 <div  class="row justify-content-center fs-2"> Добро пожаловать в наш магазин</div>
-    <div class="col-sm-4 mx-auto">
+    <div class=" d-flex flex-column mx-auto align-items-center">
     
-        <form method="post" class="d-flex flex-column align-items-center col-auto">
+        <form method="post" class="d-flex flex-column align-items-center col-4">
 
-        <input type="text" class="form-control" name="login" placeholder='логин' required>
-        <input type="password" class="form-control" name="pass" placeholder='пароль' required>
-        <input type="submit" class="col-auto btn btn-success mt-2" value="Войти" name="auth">
-        <input type="submit" class="col-auto btn btn-primary mt-2" value="Регистрация" name="reg">
-    </form>
+            <input type="text" class="form-control" name="login" placeholder='логин' required>
+            <input type="password" class="form-control" name="pass" placeholder='пароль' required>
+            <input type="submit" class="col-auto btn btn-success mt-2" value="Войти" name="auth">    
+        </form>
+        <a href="reg.php" > <button class="col-auto btn btn-primary mt-2"> Регистрация</button></a>
 <!-- 
 
 
