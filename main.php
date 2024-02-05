@@ -133,6 +133,27 @@ if ($_POST['exit']) {
 
     </div>
   </div>
+
+  <div class="container  mt-4">
+    <div class="box_big">
+
+    <div class="box1  ">
+        <img src="фото/ванна3.jpg" class="img1" alt="">
+      </div>
+      <div class="box1 d-flex flex-column mb-3">
+        <div class="fs-1 fw-bold text-start">О нас</div>
+        <div class="p-2 text-start text-secondary">Мы предлагаем широкий спектр услуг, который включает комплексную
+          ручную и бесконтактную мойку, чистку багажника, а также уход за арками, фонарями, бамперами и прочими частями
+          авто. Наши специалисты используют только высокотехнологичные составы и современные методики, что гарантирует
+          высокое качество оказываемых услуг. Вас приятно удивят цены на мойку автомобиля, внимательный подход к
+          клиентам и удобный график работы.</div>
+        <div class="p-2 fs-3 fw-bold text-start">Звоните: +1(23)-45-67-890</div>
+      </div>
+      
+
+    </div>
+  </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

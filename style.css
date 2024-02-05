@@ -25,9 +25,52 @@ body{
     width: 30%;  
 }
 
+.box_big{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 25px;
+}
+
+.img1{
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+}
+
+@media(max-width: 1200px){
+    .img1{
+        height: 340px;
+
+    } 
+}
+
+.box1{
+    width: 45%; 
+    min-width:422px ;
+}
+@media(max-width: 992px){
+    .box_big{
+        justify-content: center;       
+    } 
+    .box1{
+        width: 100%; 
+    }
+
+    .box1_none{
+        display: none;
+    }
+    .item_text{
+        justify-content: center; 
+    }
+    .item{
+        width: 100%;  
+    }
+}
 
 
 
+/*
 .aaaaa{
     display: flex;
     flex-wrap: wrap; 
