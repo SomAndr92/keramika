@@ -27,7 +27,7 @@ if ($_POST['exit']) {
 
 
 <div class="p-5 text-start bg-image d-flex align-items-center fon1">
-    <div class="mask m-auto w-75 p-3 container ">
+    <div class="mask m-auto p-3 container ">
       <div class="d-flex  h-100">
         <div class="text-white">
           <h1 class="mb-3 fw-bold">Керамическая плитка высокого качества</h1>
@@ -88,11 +88,34 @@ if ($_POST['exit']) {
         <button type="button" class="btn btn-secondary">Побробнее о выборе</button>
         </a>
       </div>
-      <img src="фото/Напольная плитка/ Quadro Decor.webp" class="img1" alt="">
+   
 
     </div>
   </div>
-
+  <div class="p-5 text-start bg-image d-flex align-items-center mt-5 fon2">
+    <div class="mask m-auto p-3 container ">
+      <div class="d-flex  h-100">
+        <div class="text-white">
+          <h1 class="mb-3 fw-bold" id="about_us">О компании Керамика</h1>
+          <h3 class="mb-3 ">Более 1200 коллекций, 255 фабрик, 30 000 наименований плитки по оптовым ценам.</h3>
+          <h6 class="mb-3 lh-base">Компания Люкс Керамика рада предложить свой многолетний опыт работы с 
+            облицовочными материалами, широкий выбор изысканной, стильной и качественной керамической 
+            плитки, керамогранита и мозаики ведущих производителей Италии, Испании и Португалии. 
+            Представленный у нас материал непременно украсит Ваш дом или квартиру и идеально впишется в 
+            интерьер.
+            <br>
+            <br>
+            Обратившись к нам, Вы гарантированно купите высококачественную керамическую плитку, отвечающую 
+            Вашим потребностям и на выгодных условиях, а мы постараемся сделать так, чтобы покупка плитки 
+            была максимально удобной и доставила Вам удовольствие.
+            <br>
+            <br>
+            Искренне будем рады видеть Вас в числе наших клиентов!</h6>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

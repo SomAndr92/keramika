@@ -17,8 +17,13 @@ body{
 .fon1{
     background: url('/фото/фон_ванная\(темная\)1.jpg') no-repeat;
     background-size: cover;
-    height: 450px;
-    
+    height: 450px;   
+}
+
+.fon2{
+    background: url('/фото/магазин.jpg') no-repeat;
+    background-size: cover;
+    height: 450px;   
 }
 
 .item{
