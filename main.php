@@ -23,75 +23,11 @@ if ($_POST['exit']) {
 
 </head>
 <body>
-<nav class="navbar bg-dark navbar-expand-lg" data-bs-theme="dark" >
-  <div class="container">
-    <a class="navbar-brand">КЕРАМИКА</a>
-   <? if(!empty($_SESSION['login'])){?>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
-          <span class="navbar-toggler-icon"></span>
-        </button> 
-      
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div class="navbar-nav d-flex align-items-center ">
-            <a class="nav-link text-light me-4" href="#">О нас</a>
-            <li class="nav-item  dropdown text-light me-4">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Услуги
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Бесконтактаная мойка</a></li>
-                <li><a class="dropdown-item" href="#">Пылесос салона</a></li>
-                <li><a class="dropdown-item" href="#">Очистка дисков от нагара</a></li>
-              </ul>
-            </li>
-            <a class="nav-link text-light me-4" href="#">Клубная карта</a>
-            <a class="nav-link text-light me-4" href="#">Отзывы</a>
-            <a class="nav-link text-light me-4" href="#">Контакты</a>
-
-            <li class="nav-item  dropdown text-light me-4">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa-solid fa-user fa-lg" style="color: green;"></i>
-              </a>
-              <ul class="dropdown-menu">
-              <a class="nav-link text-light me-4" href="#"> <form method="post" class="d-flex flex-column align-items-center" >
-    
-                    <div class="me-2 text-light">
-
-                      <?  echo $_SESSION['login'];
-                    ?>
-                  </div>
-
-                    <input class="btn btn-outline-warning" type="submit" name="exit" value="Выход">
-                  </form></a>
-              </ul>
-            </li>
-<!--
-            <a class="nav-link text-light me-4" href="#"> <form method="post" class="d-flex align-items-center" >
-    
-    <div class="me-2 text-light">
-    <i class="fa-solid fa-user fa-lg" style="color: green;"></i>
-    
-      <?  echo $_SESSION['login'];
-      
-    ?>
-    
-  </div>
-    
-    <input class="btn btn-outline-warning" type="submit" name="exit" value="Выход">
-  </form></a>
-   -->
-          </div>
-        </div>    
-   
-    <?
-}?>
-  </div>
-</nav>  
+<?include "header.php"?>
 
 
 <div class="p-5 text-start bg-image d-flex align-items-center fon1">
-    <div class="mask m-auto w-75 p-3 ">
+    <div class="mask m-auto w-75 p-3 container ">
       <div class="d-flex  h-100">
         <div class="text-white">
           <h1 class="mb-3 fw-bold">Керамическая плитка высокого качества</h1>
@@ -129,27 +65,30 @@ if ($_POST['exit']) {
           середину между качеством и ценой</div>
       </div>
 
-
-
     </div>
   </div>
 
   <div class="container  mt-4">
     <div class="box_big">
 
-    <div class="box1  ">
+    <div class="box1">
         <img src="фото/ванна3.jpg" class="img1" alt="">
       </div>
       <div class="box1 d-flex flex-column mb-3">
-        <div class="fs-1 fw-bold text-start">О нас</div>
-        <div class="p-2 text-start text-secondary">Мы предлагаем широкий спектр услуг, который включает комплексную
-          ручную и бесконтактную мойку, чистку багажника, а также уход за арками, фонарями, бамперами и прочими частями
-          авто. Наши специалисты используют только высокотехнологичные составы и современные методики, что гарантирует
-          высокое качество оказываемых услуг. Вас приятно удивят цены на мойку автомобиля, внимательный подход к
-          клиентам и удобный график работы.</div>
-        <div class="p-2 fs-3 fw-bold text-start">Звоните: +1(23)-45-67-890</div>
+        <div class="box1"> 
+        <img src="фото/ванна_маленькая.jpg" class="img1" alt="">
+        </div>
+        <div class="fs-1 fw-bold text-start">Как выбрать керамическую плитку?</div>
+        <div class="p-2 text-start text-secondary">Преимуществами керамической плитки являются такие 
+          ее качества, как  долговечность, универсальность, простота в уходе и, конечно, эстетический вид. 
+          Сегодня компаний, производящих плитку, великое множество, разнообразны также коллекции керамической 
+          плитки, поэтому выбор и покупка превращается в сложную  задачу. Как же не ошибиться в выборе этого 
+          отделочного материала? И по каким критериям ее выбирать?</div>
+        <a href="https://rkeramika.ru/stati/kak-vybrat-plitku/" >
+        <button type="button" class="btn btn-secondary">Побробнее о выборе</button>
+        </a>
       </div>
-      
+      <img src="фото/Напольная плитка/ Quadro Decor.webp" class="img1" alt="">
 
     </div>
   </div>

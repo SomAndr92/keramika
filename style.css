@@ -33,17 +33,18 @@ body{
 }
 
 .img1{
-    height: 100%;
+   
     width: 100%;
     max-width: 500px;
 }
 
-@media(max-width: 1200px){
+/*@media(max-width: 1200px){
     .img1{
         height: 340px;
 
     } 
 }
+*/
 
 .box1{
     width: 45%; 
