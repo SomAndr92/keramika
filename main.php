@@ -85,7 +85,7 @@ if ($_POST['exit']) {
           плитки, поэтому выбор и покупка превращается в сложную  задачу. Как же не ошибиться в выборе этого 
           отделочного материала? И по каким критериям ее выбирать?</div>
         <a href="https://rkeramika.ru/stati/kak-vybrat-plitku/" >
-        <button type="button" class="btn btn-secondary">Побробнее о выборе</button>
+        <button type="button" class="btn btn-secondary">Подробнее о выборе</button>
         </a>
       </div>
    

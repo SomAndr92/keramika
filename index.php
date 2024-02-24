@@ -48,7 +48,7 @@ if ($_POST['exit']) {
 </head>
 
 <body >
-
+<!--
 <nav class="navbar bg-body-tertiary">
   <div class="container">
     <a class="navbar-brand">ЛОГО</a>
@@ -64,6 +64,8 @@ if ($_POST['exit']) {
 }?>
   </div>
 </nav>
+-->
+<?include "header.php"?>
 
 <div class="container">
 <div  class="row justify-content-center fs-2"> Добро пожаловать в наш магазин</div>

@@ -45,6 +45,8 @@ if ($_POST['exit']) {
 
 </head>
 <body >
+<?include "header.php"?>
+<!--
 <nav class="navbar bg-body-tertiary">
   <div class="container">
     <a class="navbar-brand">ЛОГО</a>
@@ -60,6 +62,7 @@ if ($_POST['exit']) {
 }?>
   </div>
 </nav>
+-->
     <div class="container">
     <div class="mx-auto d-flex flex-column align-items-center">
         <div  class=" row justify-content-md-center fs-2"> Регистрация</div>
