@@ -15,9 +15,9 @@
                 Продукция
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Бесконтактаная мойка</a></li>
-                <li><a class="dropdown-item" href="#">Пылесос салона</a></li>
-                <li><a class="dropdown-item" href="#">Очистка дисков от нагара</a></li>
+                <li><a class="dropdown-item" href="pol.php">Напольные покрытия</a></li>
+                <li><a class="dropdown-item" href="#">Плитка для ванной комнаты</a></li>
+                <li><a class="dropdown-item" href="#">Плитка для кухни</a></li>
               </ul>
             </li>
             <a class="nav-link text-light me-4" href="catalog.php">Каталог</a>

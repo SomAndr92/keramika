@@ -15,7 +15,7 @@ if ($_POST['exit']) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог</title>
+    <title>Напольные покрытия</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
    <link rel="stylesheet" href="style.css">
@@ -26,29 +26,29 @@ if ($_POST['exit']) {
 <?include "header.php"?>
 
 <div class="container text-center"> 
-    <div class="mt-2 mb-3"><h1>Каталог продукции</h1></div>
-<div class="row">
+<div class="mt-2 mb-3"><h1>Напольные покрытия</h1></div>
+<div class="d-flex flex-wrap mb-3 gap-3 justify-content-between ">
 
 
 <?php
 
         $db = dbconn();
             
-            $query = $db->query("SELECT * FROM `categories`");
-            while($row=$query->fetch_assoc())
-            {
-            ?> 
-            <div class="col-4 gy-2">
-            <a href="<?=$row['ссылка']?>" class="text_cat">
-            <img src="<?=$row['фото']?>" alt="" class="jpgr">
-            <br>
-                <?=$row['категория']?>
-                
-            </a>    
-            </div>
+            $query = $db->query("SELECT * FROM `product`");
             
+            while($row=$query->fetch_assoc())
+            { if ($row['Категория']=='Напольная плитка'){
+            ?>
+            <div class="col-3 h-100 ">
+            <img src="<?=$row['Фото главное']?>" alt="" class="jpgr">
+            <br>
+                <?=$row['Наименование']?>
+                <br>
+            <a href ="user.php?id=<?=$row['id']?>" class="btn btn-primary">Подробнее</a>
+            </div>
             <?
             }
+        }
            /* if($_SESSION['role'] == 'admin'){?>
                 <a href ="new_prod.php?id=<?=$row['id']?>" class="btn btn-outline-success box-btn gy-2">Добавить новый товар <br>  <i class="fa-regular fa-square-plus fa-2xl mt-4"></i></a> <?
            }*/
