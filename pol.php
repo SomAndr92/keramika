@@ -39,12 +39,16 @@ if ($_POST['exit']) {
             while($row=$query->fetch_assoc())
             { if ($row['Категория']=='Напольная плитка'){
             ?>
-            <div class="col-3 h-100 ">
-            <img src="<?=$row['Фото главное']?>" alt="" class="jpgr">
-            <br>
-                <?=$row['Наименование']?>
-                <br>
-            <a href ="user.php?id=<?=$row['id']?>" class="btn btn-primary">Подробнее</a>
+            <div class="col-3 h-100">
+            <a href ="user.php?id=<?=$row['id']?>" class="a_href" style="text-decoration: none " style="color: red">
+            <div class="scale"> <img src="<?=$row['Фото главное']?>" alt="" class="scale jpgr "></div>
+            
+               <div > <?=$row['Наименование']?></div>
+                
+                <div class="text_price"> <?=$row['Цена']?></div>
+                
+                
+            <div class="btn btn-primary">Подробнее</div></a>
             </div>
             <?
             }
