@@ -26,7 +26,7 @@ if ($_POST['exit']) {
 <?include "header.php"?>
 
 <div class="container text-center"> 
-<div class="mt-2 mb-3"><h1>Напольные покрытия</h1></div>
+<div class="mt-2 mb-3"><h1>Плитка для ванной комнаты</h1></div>
 
 <div class="row justify-content-evenly">
 
@@ -37,7 +37,7 @@ if ($_POST['exit']) {
             $query = $db->query("SELECT * FROM `product`");
             
             while($row=$query->fetch_assoc())
-            { if ($row['Категория']=='Напольная плитка'){
+            { if ($row['Категория']=='Плитка для ванной'){
             
             include 'list.php';
             

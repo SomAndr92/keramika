@@ -49,6 +49,13 @@ body{
     
 }
 
+.jpg_cat{
+    width: 100%; 
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+
 .jpgr:hover{
   
     box-shadow: -16px 18px 38px 10px #808080;
@@ -81,6 +88,10 @@ body{
     width: 45%; 
     min-width:422px ;
 }
+
+.box_list{
+    width: 31%;
+}
 @media(max-width: 992px){
     .box_big{
         justify-content: center;       
@@ -101,8 +112,16 @@ body{
     .fon2{
         height: 550px;   
     }
+    .box_list{
+        width: 48%;
+    }
 }
 
+@media(max-width: 550px){
+    .box_list{
+        width: 100%;
+    } 
+}
 
 .text_price{
     font-weight: 700;

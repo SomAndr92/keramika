@@ -16,7 +16,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="pol.php">Напольные покрытия</a></li>
-                <li><a class="dropdown-item" href="#">Плитка для ванной комнаты</a></li>
+                <li><a class="dropdown-item" href="vanna.php">Плитка для ванной комнаты</a></li>
                 <li><a class="dropdown-item" href="#">Плитка для кухни</a></li>
               </ul>
             </li>
@@ -29,7 +29,8 @@
               <i class="fa-solid fa-user fa-lg" style="color: green;"></i>
               </a>
               <ul class="dropdown-menu">
-              <a class="nav-link text-light me-4" href="#"> <form method="post" class="d-flex flex-column align-items-center" >
+              <a class="nav-link text-light me-4" href="#">
+                 <form method="post" class="d-flex flex-column align-items-center" >
     
                     <div class="me-2 text-light">
 
