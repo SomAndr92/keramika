@@ -49,6 +49,14 @@ if($_GET)
                 <div> <?echo $row['Цена'].'<br>';?></div>
                 <div><button class="btn btn-success mt-2">Купить</button></div>
               </div>
+              <div class="book"> 
+                 <p><span>Страна производства</span><span><?echo $row['Страна производства'].'<br>';?></span></p>
+                 <p><span>2. Кульминация</span><span>стр. 10</span></p>
+                 <p><span>3. Развязка</span><span>стр. 100</span></p>
+                 <p><span>Послесловие</span><span></span></p>
+                  
+              </div>
+
               <div > <?echo $row['Страна производства'].'<br>';?></div>
               <div class="mt-3" > 
                 <div class="name_small mb-2">Описание</div> 

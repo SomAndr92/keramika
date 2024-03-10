@@ -17,7 +17,8 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="pol.php">Напольные покрытия</a></li>
                 <li><a class="dropdown-item" href="vanna.php">Плитка для ванной комнаты</a></li>
-                <li><a class="dropdown-item" href="#">Плитка для кухни</a></li>
+                <li><a class="dropdown-item" href="kitchen.php">Плитка для кухни</a></li>
+                <li><a class="dropdown-item" href="grout.php">Затирка для швов</a></li>
               </ul>
             </li>
             <a class="nav-link text-light me-4" href="catalog.php">Каталог</a>
