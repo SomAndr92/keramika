@@ -124,6 +124,10 @@ body{
     font-weight: 700;
     font-size: 20px;
 }
+.text_pricecard{
+    font-weight: 700;
+    font-size: 30px;
+}
 
 .scale {
     display: inline-block; /* Строчно-блочный элемент */
@@ -163,12 +167,12 @@ body{
 }
 
 .book {
-    width: 250px;
+    width: 100%;
   }
   p {
       overflow: hidden;
   }
-  p:after {  content:'..................................................';
+  p:after {  content:'.........................................................................................................';
     display: block;
     white-space: nowrap;
     overflow: hidden;
@@ -182,7 +186,17 @@ body{
     margin-left: 10px;
   }
   
-  
+ .new_tovar{
+    height: 80%;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 25px; ;
+ }
+
+
+
   
 /*
 .aaaaa{

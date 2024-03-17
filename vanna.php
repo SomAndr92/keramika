@@ -43,6 +43,7 @@ if ($_POST['exit']) {
             
             }
         }
+        include 'new_tovar.php';
            /* if($_SESSION['role'] == 'admin'){?>
                 <a href ="new_prod.php?id=<?=$row['id']?>" class="btn btn-outline-success box-btn gy-2">Добавить новый товар <br>  <i class="fa-regular fa-square-plus fa-2xl mt-4"></i></a> <?
            }*/

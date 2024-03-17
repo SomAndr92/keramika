@@ -58,18 +58,18 @@ if ($_POST['exit']) {
 Поля необязательные к заполнению
 </div>
 <div class="col-md-3">
-<input type="text" class="form-control col-md-4" name="width" placeholder='Ширина*' required>
+<input type="text" class="form-control col-md-4" name="width" placeholder='Ширина*' >
 </div>
 
 <div class="col-md-3">
-<input type="text" class="form-control col-md-4" name="length" placeholder='Длина*' required>
+<input type="text" class="form-control col-md-4" name="length" placeholder='Длина*' >
 </div>
 
 <div class="col-md-3">
-<input type="text" class="form-control col-md-4" name="tolshchina" placeholder='Толщина*' required>
+<input type="text" class="form-control col-md-4" name="tolshchina" placeholder='Толщина*' >
 </div>
 <div class="col-md-3">
-<input type="text" class="form-control col-md-4" name="weight" placeholder='Вес*' required>
+<input type="text" class="form-control col-md-4" name="weight" placeholder='Вес*'>
 </div>
 
 <div class="col-md-4">
@@ -85,19 +85,42 @@ $name = $_POST['name'];
 $price = $_POST['price'];
 $country = $_POST['country'];
 $opisaniye = $_POST['opisaniye'];
+
+
 $width=$_POST['width'];    
 $length = $_POST['length'];
 $tolshchina = $_POST['tolshchina'];
 $weight = $_POST['weight'];
+
+if(empty($_POST['weight'])) {
+    $width = 0;
+}
+
+if(empty($_POST['length'])) {
+    $length = 0;
+}
+
+
+if(empty($_POST['tolshchina'])) {
+    $tolshchina = 0;
+}
+
+
+if(empty($_POST['weight'])) {
+    $weight = 0;
+}
+
+
+
 
 if (!empty($name) and !empty($price) and !empty($category) and !empty($opisaniye)) {
     $db = dbconn();
         $uploaddir = 'фото/напольная плитка/';
     $uploadfile = $uploaddir . basename($_FILES['photo']['name']);
     if (move_uploaded_file($_FILES['photo']['tmp_name'], $uploadfile)) {
-        echo 'ok';
+        echo 'фото добавлено ';
       } else {
-          echo "ne ok";
+          echo "фото не добавлено ";
       }
         $query = $db->query("INSERT INTO `product`(`Категория`,`Наименование`, `Цена`, `Описание`, `Страна производства`,`Фото главное`,`Ширина`,`Длина`,`Толщина`,`Вес`) 
                                             VALUES ('$category','$name',       '$price','$opisaniye','$country',  '$uploadfile','$width' ,'$length','$tolshchina','$weight')");  
