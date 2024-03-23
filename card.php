@@ -8,6 +8,27 @@ if ($_POST['exit']) {
         header('Location: /desroy.php');
 }
 }
+/*добавили*/
+if ($_POST['bask']) {
+
+  $arr = [
+    "name"=>$_POST['product_name'],
+    "photo"=>$_POST['product_photo'],
+    "price"=>$_POST['product_price']
+  ];
+
+  if($_SESSION['basket'] == null) {
+    $_SESSION['basket'] = [];
+  } 
+    array_push($_SESSION['basket'], $arr);
+  
+
+  $user = $_SESSION['login'];
+
+    var_dump($_SESSION['basket']);
+  
+      }
+ /*вот до сюда*/
 
     ?>
 <!DOCTYPE html>
@@ -40,14 +61,20 @@ if($_GET)
             {
             ?>
             
-            
+          <!-- ($_POST['bask'])-->  <form method="post" class="row  gy-1" enctype="multipart/form-data">
+
+<!-- ($_POST['bask'])-->
+              <input type="text" hidden name="product_name" value="<?=$row['Наименование']?>">
+              <input type="text" hidden name="product_photo" value="<?=$row['Фото главное']?>">
+              <input type="text" hidden name="product_price" value="<?=$row['Цена']?>">
+<!-- ($_POST['bask'])-->              
             <div class="afisha">
-            <div class="cardbox_img"> <img src="<?=$row['Фото главное']?>" class="jpg_cat" alt=""></div>
+            <div class="cardbox_img" name="product_image"> <img src="<?=$row['Фото главное']?>" class="jpg_cat" alt=""></div>
             <div class="cardbox_text">
-            <div class="mb-3"><h2><?echo $row['Наименование'].'<br>';?></h2></div>
+            <div class="mb-3" name="product_name"><h2><?echo $row['Наименование'].'<br>';?></h2></div>
               <div class="small_box">
                 <div class="text_pricecard"> <?echo $row['Цена'].'<br>';?></div>
-                <div><button class="btn btn-success mt-2">В корзину</button></div>
+<!-- ($_POST['bask'])-->     <div><input type="submit" class="btn btn-success mt-2" value="В корзину" name="bask"></div>
               </div>
               <div class="book"> 
                  <p><span>Страна производства</span><span><?echo $row['Страна производства'].'<br>';?></span></p>
@@ -74,7 +101,7 @@ if($_GET)
             </div>
             </div>
            
-            
+                 </form><!-- ($_POST['bask'])-->
             <?
             }
         }

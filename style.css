@@ -52,7 +52,25 @@ body{
     aspect-ratio: 1/1;
 }
 
+.jpg_basket{
+   
+   width: 100%; 
+   object-fit: cover;
+   aspect-ratio: 1/1;
+}
 
+.jpg_basketmain{
+    
+    width: 20%; 
+ }
+
+ .name_basketmain{
+    width: 50%;
+ }
+
+.fon_basket{
+    background-color: #bbb9b9;
+}
 .jpgr:hover{
   
     box-shadow: -16px 18px 38px 10px #808080;
@@ -71,6 +89,9 @@ body{
     text-transform: none;
 }
 
+.zakaz{
+    width: 100%;
+}
 
 
 /*@media(max-width: 1200px){
@@ -107,7 +128,7 @@ body{
         width: 100%;  
     }
     .fon2{
-        height: 550px;   
+        height: 650px;   
     }
     .box_list{
         width: 48%;
@@ -195,8 +216,15 @@ body{
     font-size: 25px; ;
  }
 
+.cent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-
+.karta{
+    width: 100%;
+}
   
 /*
 .aaaaa{
