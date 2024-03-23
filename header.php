@@ -22,7 +22,7 @@
               </ul>
             </li>
             <a class="nav-link text-light me-4" href="catalog.php">Каталог</a>
-            <a class="nav-link text-light me-4" href="#">Отзывы</a>
+            <a class="nav-link text-light me-4" href="main.php#kontact">Контакты</a>
             <a class="nav-link text-light me-4" href="basket.php">Корзина</a>
 
             <li class="nav-item  dropdown text-light me-4">

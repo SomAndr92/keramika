@@ -41,7 +41,7 @@ if ($_POST['exit']) {
   </div>
 
   <div class="container  mt-5">
-    <div class="fs-5 text-secondary font-monospace">НАДЕЖНОСТЬ</div>
+    <div class="fs-5 text-secondary font-monospace" id="plus">НАДЕЖНОСТЬ</div>
     <div class="fs-1">Почему нам можно доверять</div>
     <div class=" d-flex flex-row mb-3 justify-content-between item_text mt-5 flex-wrap">
 
@@ -117,7 +117,7 @@ if ($_POST['exit']) {
   </div>
 
   <div class="container  mt-5">
-    <div class="fs-5 text-secondary font-monospace">ДОСТАВКА И ОПЛАТА</div>
+    <div class="fs-5 text-secondary font-monospace " id="dostavka">ДОСТАВКА И ОПЛАТА</div>
     <div class="fs-1">Условия доставки и оплаты</div>
     
     <div class="container  mt-4">
@@ -148,7 +148,28 @@ if ($_POST['exit']) {
       </div>
       </div>
       
-    <div class="container karta mt-5">
+      <div class="container  mt-5">
+    <div class="fs-5 text-secondary font-monospace "id="kontact">КОНТАКТЫ</div>
+    
+    
+    <div class="container  mt-4">
+    <div class="box_big">
+
+    
+      <div class="box2 d-flex flex-column mb-3">
+
+      
+        <div class="text-start lh-lg fs-5"> <span class="fs-3 fw-bold"> Мы ждем вас по адресу:</span> <br>
+        Калуга, улица Спартака 15.<br>
+        E-mail: keramika@yandex.ru<br>
+        Телефон: 8 800 300 06 00 отдела продаж<br>
+        Контактное лицо: Степанов В.И.  <br>
+          </div>
+
+        
+
+      </div>
+      <div class="karta">
       <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/6/kaluga/?utm_medium=mapframe&utm_source=maps" 
       style="color:#eee;font-size:12px;position:absolute;top:0px;">Калуга</a>
       <a href="https://yandex.ru/maps/6/kaluga/house/ulitsa_spartaka_15/Z08YdAdoQEwBQFtufXh4dXllZA==/?indoorLevel=1&ll=36.208996%2C54.494560&utm_medium=mapframe&utm_source=maps&z=17.12" 
@@ -156,6 +177,14 @@ if ($_POST['exit']) {
       <iframe src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=36.208996%2C54.494560&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgozMzcyOTI0NDU1EjvQoNC-0YHRgdC40Y8sINCa0LDQu9GD0LPQsCwg0YPQu9C40YbQsCDQodC_0LDRgNGC0LDQutCwLCAxNSIKDQTWEEIVbfpZQg%2C%2C&z=17.12" 
         width="100%" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
         </div>
+      </div>
+      </div>
+      </div>
+      </div>
+
+
+      <?include "footer.php"?>
+      
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

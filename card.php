@@ -25,7 +25,7 @@ if ($_POST['bask']) {
 
   $user = $_SESSION['login'];
 
-    var_dump($_SESSION['basket']);
+    /*var_dump($_SESSION['basket']);*/
   
       }
  /*вот до сюда*/
@@ -100,14 +100,18 @@ if($_GET)
                <?echo $row['Описание'].'<br>';?></div>
             </div>
             </div>
+
            
                  </form><!-- ($_POST['bask'])-->
             <?
             }
         }
+        
 
 ?>
-
+</div>
+</div>
+<?include "footer.php"?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
