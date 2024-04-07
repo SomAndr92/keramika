@@ -49,7 +49,7 @@ if ($_POST['exit']) {
             
             <?
             }
-include 'new_tovar.php';
+include 'plus_cat.php';
         
 ?>
 </div>

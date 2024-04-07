@@ -15,15 +15,21 @@
                 Продукция
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="pol.php">Напольные покрытия</a></li>
-                <li><a class="dropdown-item" href="vanna.php">Плитка для ванной комнаты</a></li>
-                <li><a class="dropdown-item" href="kitchen.php">Плитка для кухни</a></li>
-                <li><a class="dropdown-item" href="grout.php">Затирка для швов</a></li>
+              <?php
+
+$db = dbconn();
+    
+    $query = $db->query("SELECT * FROM `categories`");
+    while($row=$query->fetch_assoc())
+    {
+      ?><li><a class="dropdown-item" href="products.php?id=<?=$row['ID']?>"><?=$row['категория']?></a></li>
+    <?}?>
+             
               </ul>
             </li>
             <a class="nav-link text-light me-4" href="catalog.php">Каталог</a>
             <a class="nav-link text-light me-4" href="main.php#kontact">Контакты</a>
-            <a class="nav-link text-light me-4" href="basket.php">Корзина <?php if ($_SESSION['basket'] != null) {?> +<?} ?></a>
+            <a class="nav-link text-light me-4" href="basket.php">Корзина <?php if ($_SESSION['basket'] != null) {?> <i class="fa-solid fa-circle fa-fade" style="color: #e00606;"></i><?} ?></a>
 
             <li class="nav-item  dropdown text-light me-4">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

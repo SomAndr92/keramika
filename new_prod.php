@@ -41,7 +41,7 @@ if(empty($_POST['weight'])) {
     $weight = 0;
 }
 
-var_dump($_POST);
+/*var_dump($_POST);*/
 
 
 if (!empty($name) and !empty($price) and !empty($category) and !empty($opisaniye)) {

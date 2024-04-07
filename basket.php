@@ -62,13 +62,13 @@ if($_SESSION['basket'] != null) {
     <div class="jpg_basketmain"><img src ="<?=$stuff['photo']?>" class="jpg_basket"></div>
     <div class="name_basketmain cent"><?=$stuff['name']?></div>
     
-    <div class="d-flex justify-content-evenly cou_basketmain">
+    <div class="d-flex justify-content-center cou_basketmain">
     <div class="cent"><?=$stuff['count']?></div>
     <div class="cent">
     <form method="post">
       <input type="text" hidden name = "arr_key" value="<?=$key?>">
-      <input type="text" name = "new_count"  placeholder="количество">
-      <input type="submit" name="countAdd" class="btn btn-primary col-auto" value="добавить">
+      <input type="text" name = "new_count" class="col-5 " placeholder="количество">
+      <input type="submit" name="countAdd" class="btn btn-secondary col-auto" value="добавить">
     </form></div>
   </div>
   <?

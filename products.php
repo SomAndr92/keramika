@@ -49,10 +49,7 @@ if($_GET)
                 <div class="btn btn-secondary">Подробнее</div></a>
     </div> <?
             
-            
-                /*include 'list.php';*/
-            
-            
+                     
         }
         include 'new_tovar.php';
     }     
