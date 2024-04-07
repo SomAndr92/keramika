@@ -26,28 +26,36 @@ if ($_POST['exit']) {
 <?include "header.php"?>
 
 <div class="container text-center contan"> 
-<div class="mt-2 mb-3"><h1>Плитка для ванной комнаты</h1></div>
+<!-- <div class="mt-2 mb-3"><h1>Напольные покрытия</h1></div> -->
 
 <div class="row justify-content-evenly">
 
 <?php
-
+if($_GET)
+{
+        $id = $_GET['id'];
         $db = dbconn();
             
-            $query = $db->query("SELECT * FROM `product`");
+            $query = $db->query("SELECT * FROM `product` WHERE `id_categories`='$id'");
             
             while($row=$query->fetch_assoc())
-            { if ($row['Категория']=='Плитка для ванной'){
+            { ?>
             
-            include 'list.php';
+                <div class="box_list gy-2 ">
+                <a href ="card.php?id=<?=$row['ID']?>" class="a_href" >
+                <div class="scale"> <img src="<?=$row['Фото главное']?>" alt="" class="scale jpg_cat "></div>
+                   <div > <?=$row['Наименование']?></div>
+                    <div class="text_price"> <?=$row['Цена']?></div>
+                <div class="btn btn-secondary">Подробнее</div></a>
+    </div> <?
             
-            }
+            
+                /*include 'list.php';*/
+            
+            
         }
         include 'new_tovar.php';
-           /* if($_SESSION['role'] == 'admin'){?>
-                <a href ="new_prod.php?id=<?=$row['id']?>" class="btn btn-outline-success box-btn gy-2">Добавить новый товар <br>  <i class="fa-regular fa-square-plus fa-2xl mt-4"></i></a> <?
-           }*/
-        
+    }     
 ?>
 </div>
 </div>

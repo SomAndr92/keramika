@@ -61,11 +61,15 @@ body{
 
 .jpg_basketmain{
     
-    width: 20%; 
+    width: 15%; 
  }
 
  .name_basketmain{
-    width: 50%;
+    width: 30%;
+ }
+
+ .cou_basketmain{
+    width: 35%;
  }
 
 .fon_basket{
@@ -235,6 +239,22 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.centr{
+    display: flex;
+    align-items: center;
+  height: 75vh; /* Высота соответствует видимой области экрана */
+  
+}
+
+.centr_1{
+    flex-grow: 1; /* Равномерное растяжение зазоров  */
+    
+}
+
+.contan{
+    min-height: calc(100vh - 200px);
 }
 
 

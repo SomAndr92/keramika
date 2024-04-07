@@ -7,10 +7,12 @@ if ($_POST['auth']) {
 
     $new_login = $_POST['n_login'];
     $new_pass = $_POST['n_pass'];
+    $pass_repe = $_POST['n_passrepeat'];
     $new_email = $_POST['n_email'];
 
-    if (!empty($new_login) and !empty($new_pass) and !empty($new_email) ) {
+    if (!empty($new_login) and !empty($new_pass) and !empty($new_email) and !empty($pass_repe)) {
         $db = dbconn();
+        if ( $new_pass == $pass_repe){
             $new_pass=md5($new_pass);
             $query = $db->query("INSERT INTO `users`(`login`, `pass`, `email`) 
             VALUES ('$new_login', '$new_pass', '$new_email')");  
@@ -20,7 +22,8 @@ if ($_POST['auth']) {
                 header("location: /");
             } else{
                 echo 'логин уже существует';
-            }      
+            }   
+        } else {echo 'пароли не совпадают';}   
         }
     }
 
@@ -63,7 +66,8 @@ if ($_POST['exit']) {
   </div>
 </nav>
 -->
-    <div class="container">
+    <div class="container centr">
+    <div class="centr_1">
     <div class="mx-auto d-flex flex-column align-items-center">
         <div  class=" row justify-content-md-center fs-2"> Регистрация</div>
         
@@ -74,11 +78,13 @@ if ($_POST['exit']) {
 
         <input type="text" class="form-control" name="n_login" placeholder='логин' required >
         <input type="password" class="form-control" name="n_pass" placeholder='пароль' required>
+        <input type="password_repeat" class="form-control" name="n_passrepeat" placeholder='повторите пароль' required>
         <input type="email" class="form-control" name="n_email" placeholder='email' required >
         <input type="submit" class="btn btn-primary col-auto mt-2" value="Зарегистрироваться" name="auth">
     </form>
     <a href="index.php" > <button class="col-auto btn btn-warning mt-2"> Отмена</button></a>
     <?}?>
+    </div>
     </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 

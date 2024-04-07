@@ -25,7 +25,7 @@ if ($_POST['exit']) {
 <body>
 <?include "header.php"?>
 
-<div class="container text-center"> 
+<div class="container text-center contan"> 
 <div class="mt-2 mb-3"><h1>Напольные покрытия</h1></div>
 
 <div class="row justify-content-evenly">
@@ -37,9 +37,18 @@ if ($_POST['exit']) {
             $query = $db->query("SELECT * FROM `product`");
             
             while($row=$query->fetch_assoc())
-            { if ($row['Категория']=='Напольная плитка'){
+            { if ($row['Категория']=='Напольная плитка'){?>
             
-            include 'list.php';
+                <div class="box_list gy-2 ">
+                <a href ="card.php?id=<?=$row['ID']?>" class="a_href" >
+                <div class="scale"> <img src="<?=$row['Фото главное']?>" alt="" class="scale jpg_cat "></div>
+                   <div > <?=$row['Наименование']?></div>
+                    <div class="text_price"> <?=$row['Цена']?></div>
+                <div class="btn btn-secondary">Подробнее</div></a>
+    </div> <?
+            
+            
+                include 'list.php';
             
             }
         }

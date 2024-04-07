@@ -25,7 +25,7 @@ if ($_POST['exit']) {
 <body>
 <?include "header.php"?>
 
-<div class="container text-center"> 
+<div class="container text-center contan"> 
 <div class="mt-2 mb-3"><h1>Затирка для швов</h1></div>
 
 <div class="row justify-content-evenly">

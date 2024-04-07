@@ -67,7 +67,8 @@ if ($_POST['exit']) {
 -->
 <?include "header.php"?>
 
-<div class="container">
+<div class="container centr">
+    <div class="centr_1">
 <div  class="row justify-content-center fs-2"> Добро пожаловать в наш магазин</div>
     <div class=" d-flex flex-column mx-auto align-items-center">
     
@@ -113,6 +114,7 @@ if ($_POST['exit']) {
         </div>
     </div>
     -->
+    </div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

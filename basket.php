@@ -9,6 +9,7 @@ if ($_POST['exit']) {
 }
 }
 
+
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +26,7 @@ if ($_POST['exit']) {
 <body>
 <?include "header.php"?>
 
-<div class="container text-center"> 
+<div class="container text-center contan"> 
 <div class="mt-2 mb-3"><h1>Корзина</h1></div>
     
 <div class="row">
@@ -36,36 +37,63 @@ if ($_POST['exit']) {
 <div class="d-flex justify-content-between mt-4 fon_basket fs-3">
 <div class="jpg_basketmain">Фото</div>
 <div class="name_basketmain">Наименование </div>
-
+<div class="cou_basketmain">Количество</div>
 <div class="jpg_basketmain">Цена</div>
 </div>
 
 <?php
+if($_POST['countAdd']) {
+
+  /*var_dump($_POST['arr_key']);*/
+ /* var_dump($_SESSION['basket'][$_POST['arr_key']]['count']);*/
+  $_SESSION['basket'][$_POST['arr_key']]['count'] = $_POST['new_count'];
+}
+
 if($_SESSION['basket'] != null) {
   $kol=0;
   $rezult=0;
   $arr=0;
   $x=0;
-  foreach ($_SESSION['basket'] as $stuff) {
+  foreach ($_SESSION['basket'] as $key=>$stuff) {
+    if ($stuff['count']>0){
     
     ?>
     <div class="d-flex justify-content-between mt-4 fs-4">
     <div class="jpg_basketmain"><img src ="<?=$stuff['photo']?>" class="jpg_basket"></div>
     <div class="name_basketmain cent"><?=$stuff['name']?></div>
     
-    <div class="jpg_basketmain cent"><?=$stuff['price']?></div>
+    <div class="d-flex justify-content-evenly cou_basketmain">
+    <div class="cent"><?=$stuff['count']?></div>
+    <div class="cent">
+    <form method="post">
+      <input type="text" hidden name = "arr_key" value="<?=$key?>">
+      <input type="text" name = "new_count"  placeholder="количество">
+      <input type="submit" name="countAdd" class="btn btn-primary col-auto" value="добавить">
+    </form></div>
+  </div>
+  <?
+  $arr=explode('₽',$stuff['price']);
+
+$x=(int)$arr[0]*$stuff['count'];
+?>
+    <div class="jpg_basketmain cent"><?=$x?> Руб</div>
+    
   </div>
     <?
-    $arr=explode('₽',$stuff['price']);
 
-    $x=(int)$arr[0];
     $rezult=$rezult+$x;
     $kol=$kol+1;
-  } ?>
+  } }
+  ?>
   <button class="d-flex justify-content-between btn btn-warning zakaz fs-4 mt-4 mb-4">
-    <div class="jpg_basketmain "><?echo $kol;?> товара</div>
+    <div class="jpg_basketmain "><?echo $kol;?>
+    <? if ($kol == 1) {?> товар<?}
+    else{
+      if  ($kol <5) {?>товара<?}
+      else{?>товаров<?}}?>
+    </div>
     <div class="name_basketmain ">Заказать</div>
-    <div class="jpg_basketmain ">Итого: <?echo $rezult;?> руб</div>
+    <div class="jpg_basketmain ">Итого: <?echo $rezult;?> Руб</div>
     </button> 
 <?}
 ?>
@@ -77,5 +105,3 @@ if($_SESSION['basket'] != null) {
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
-
-

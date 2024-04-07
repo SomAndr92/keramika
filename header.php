@@ -1,4 +1,4 @@
-<nav class="navbar bg-dark navbar-expand-lg" data-bs-theme="dark" >
+<nav class="navbar bg-dark navbar-expand-lg sticky-top" data-bs-theme="dark" >
   <div class="container">
     <a class="navbar-brand" <? if(!empty($_SESSION['login'])){?> href="main.php" <?}?> >КЕРАМИКА</a>
    <? if(!empty($_SESSION['login'])){?>
@@ -23,7 +23,7 @@
             </li>
             <a class="nav-link text-light me-4" href="catalog.php">Каталог</a>
             <a class="nav-link text-light me-4" href="main.php#kontact">Контакты</a>
-            <a class="nav-link text-light me-4" href="basket.php">Корзина</a>
+            <a class="nav-link text-light me-4" href="basket.php">Корзина <?php if ($_SESSION['basket'] != null) {?> +<?} ?></a>
 
             <li class="nav-item  dropdown text-light me-4">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

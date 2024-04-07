@@ -14,7 +14,8 @@ if ($_POST['bask']) {
   $arr = [
     "name"=>$_POST['product_name'],
     "photo"=>$_POST['product_photo'],
-    "price"=>$_POST['product_price']
+    "price"=>$_POST['product_price'],
+    "count" => 1
   ];
 
   if($_SESSION['basket'] == null) {
@@ -46,7 +47,7 @@ if ($_POST['bask']) {
 <body>
 <?include "header.php"?>
 
-<div class="container mt-5"> 
+<div class="container mt-5 contan"> 
     
 <div class="row">
 

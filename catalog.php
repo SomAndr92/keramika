@@ -25,7 +25,7 @@ if ($_POST['exit']) {
 <body>
 <?include "header.php"?>
 
-<div class="container text-center"> 
+<div class="container text-center contan"> 
     <div class="mt-2 mb-3"><h1>Каталог продукции</h1></div>
 <div class="row">
 
@@ -39,7 +39,7 @@ if ($_POST['exit']) {
             {
             ?> 
             <div class="col-4 gy-2">
-            <a href="<?=$row['ссылка']?>" class="text_cat">
+            <a href="products.php?id=<?=$row['ID']?>" class="text_cat">
             <img src="<?=$row['фото']?>" alt="" class="jpgr">
             <br>
                 <?=$row['категория']?>
